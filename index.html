@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script type="module" src="index.js"></script>
+  </head>
+  <body style="margin: 0">
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        padding: 8px;
+      "
+    >
+      <h1 style="margin: 0; padding: 0">
+        <a href="/" style="text-decoration: none">Todo App</a>
+      </h1>
+      <nav>
+        <ul>
+          <li style="list-style-type: none">
+            <a href="/todo-list" style="text-decoration: none">Todo List</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main style="margin-block: 8px"></main>
+    <template id="todo-new-item-template">
+      <section>
+        <legend>Add a new todo item</legend>
+        <form>
+          <fieldset>
+            <label for="todo-item-checkbox" class="visually-hidden-labels"
+              >Mark as done</label
+            >
+            <input type="checkbox" id="todo-item-checkbox" name="checked" />
+            <label for="todo-item-input" class="visually-hidden-labels"
+              >Todo item</label
+            >
+            <input type="text" id="todo-item-input" name="title" />
+            <button type="submit">Add</button>
+          </fieldset>
+        </form>
+      </section>
+    </template>
+    <template id="todo-items-template">
+      <section>
+        <h2>Todo List</h2>
+        <ul></ul>
+      </section>
+    </template>
+  </body>
+</html>
